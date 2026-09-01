@@ -14,9 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-/**
- * Implementation of ItemService for managing item inventory data.
- */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

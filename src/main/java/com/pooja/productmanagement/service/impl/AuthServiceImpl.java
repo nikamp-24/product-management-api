@@ -31,9 +31,6 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.crypto.SecretKey;
 import java.util.Date;
 
-/**
- * Implementation of AuthService for registration, login, and token refresh.
- */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

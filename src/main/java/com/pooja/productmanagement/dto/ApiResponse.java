@@ -8,9 +8,6 @@ import lombok.Setter;
 
 import java.time.Instant;
 
-/**
- * Standard generic API response wrapper.
- */
 @Getter
 @Setter
 @NoArgsConstructor

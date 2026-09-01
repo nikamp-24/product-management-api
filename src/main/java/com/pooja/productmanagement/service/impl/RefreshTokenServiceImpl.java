@@ -14,9 +14,6 @@ import java.time.Instant;
 import java.util.Optional;
 import java.util.UUID;
 
-/**
- * Implementation of RefreshTokenService for token creation, validation, and rotation.
- */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

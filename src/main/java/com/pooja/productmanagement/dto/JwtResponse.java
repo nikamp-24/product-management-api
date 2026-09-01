@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * DTO returned upon successful user authentication.
- */
 @Getter
 @Setter
 @NoArgsConstructor

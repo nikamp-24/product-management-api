@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * DTO representing inventory item details returned to clients.
- */
 @Getter
 @Setter
 @NoArgsConstructor

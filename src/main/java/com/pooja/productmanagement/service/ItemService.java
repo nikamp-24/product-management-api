@@ -5,9 +5,6 @@ import com.pooja.productmanagement.dto.ItemResponse;
 
 import java.util.List;
 
-/**
- * Service interface for Item inventory operations.
- */
 public interface ItemService {
 
     ItemResponse addItem(ItemRequest request);

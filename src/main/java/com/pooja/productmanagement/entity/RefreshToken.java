@@ -18,9 +18,6 @@ import lombok.Setter;
 
 import java.time.Instant;
 
-/**
- * RefreshToken entity representing persisted tokens for session renewal and JWT rotation.
- */
 @Entity
 @Table(name = "refresh_tokens", indexes = {
         @Index(name = "idx_refresh_token_token", columnList = "token")

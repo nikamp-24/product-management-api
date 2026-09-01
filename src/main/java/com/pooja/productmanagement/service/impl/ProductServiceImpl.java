@@ -14,9 +14,6 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.Instant;
 import java.util.List;
 
-/**
- * Implementation of ProductService for managing product catalog data.
- */
 @Service
 @RequiredArgsConstructor
 @Transactional(readOnly = true)

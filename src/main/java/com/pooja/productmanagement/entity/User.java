@@ -15,9 +15,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * User entity representing system accounts with authentication credentials and an assigned role.
- */
 @Entity
 @Table(name = "users")
 @Getter

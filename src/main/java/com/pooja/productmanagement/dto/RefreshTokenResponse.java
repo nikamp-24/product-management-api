@@ -6,9 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * DTO returned upon successful token rotation.
- */
 @Getter
 @Setter
 @NoArgsConstructor

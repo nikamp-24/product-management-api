@@ -8,9 +8,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * DTO for creating or updating an inventory item.
- */
 @Getter
 @Setter
 @NoArgsConstructor

@@ -16,9 +16,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * Controller for user authentication and registration endpoints.
- */
 @RestController
 @RequestMapping("/api/v1")
 @RequiredArgsConstructor

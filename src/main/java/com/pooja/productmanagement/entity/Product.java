@@ -15,9 +15,6 @@ import lombok.Setter;
 
 import java.time.Instant;
 
-/**
- * Product entity representing catalog items with audit metadata.
- */
 @Entity
 @Table(
         name = "products",

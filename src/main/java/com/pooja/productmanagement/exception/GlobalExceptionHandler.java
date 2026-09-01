@@ -13,9 +13,6 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 import java.time.Instant;
 import java.util.stream.Collectors;
 
-/**
- * Global exception handler providing centralized error response formatting.
- */
 @Slf4j
 @RestControllerAdvice
 public class GlobalExceptionHandler {

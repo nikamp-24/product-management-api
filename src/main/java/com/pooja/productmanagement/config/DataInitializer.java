@@ -11,9 +11,6 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
-/**
- * Initializes default application roles and an administrator account upon startup.
- */
 @Slf4j
 @Component
 @RequiredArgsConstructor

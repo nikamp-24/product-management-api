@@ -5,9 +5,6 @@ import com.pooja.productmanagement.dto.ProductResponse;
 
 import java.util.List;
 
-/**
- * Service interface for Product management operations.
- */
 public interface ProductService {
 
     ProductResponse createProduct(ProductRequest request);

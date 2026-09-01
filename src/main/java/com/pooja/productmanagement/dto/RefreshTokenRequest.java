@@ -7,9 +7,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * DTO for requesting a new access token via refresh token.
- */
 @Getter
 @Setter
 @NoArgsConstructor

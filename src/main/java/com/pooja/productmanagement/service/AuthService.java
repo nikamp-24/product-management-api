@@ -7,9 +7,6 @@ import com.pooja.productmanagement.dto.RefreshTokenRequest;
 import com.pooja.productmanagement.dto.RefreshTokenResponse;
 import com.pooja.productmanagement.dto.RegisterRequest;
 
-/**
- * Service interface for authentication and token refresh operations.
- */
 public interface AuthService {
 
     ApiResponse<String> register(RegisterRequest request);

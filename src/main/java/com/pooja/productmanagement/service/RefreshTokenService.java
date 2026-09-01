@@ -5,9 +5,6 @@ import com.pooja.productmanagement.entity.User;
 
 import java.util.Optional;
 
-/**
- * Service interface for refresh token lifecycle operations.
- */
 public interface RefreshTokenService {
 
     RefreshToken createRefreshToken(User user);

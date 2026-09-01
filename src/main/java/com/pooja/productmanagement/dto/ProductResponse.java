@@ -8,9 +8,6 @@ import lombok.Setter;
 
 import java.time.Instant;
 
-/**
- * DTO representing product details returned to clients.
- */
 @Getter
 @Setter
 @NoArgsConstructor
