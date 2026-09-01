@@ -15,9 +15,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Item entity representing inventory stock associated with a product.
- */
 @Entity
 @Table(name = "item")
 @Getter
