@@ -14,9 +14,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * Role entity representing authorities in the system.
- */
+
 @Entity
 @Table(name = "roles")
 @Getter
