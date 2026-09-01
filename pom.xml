@@ -10,7 +10,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.pooja</groupId>
+	<groupId>com.productmanagement</groupId>
 	<artifactId>product-management-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
