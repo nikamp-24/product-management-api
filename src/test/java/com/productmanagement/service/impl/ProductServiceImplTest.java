@@ -150,4 +150,16 @@ class ProductServiceImplTest {
         assertThat(responses.get(0).getProductName()).isEqualTo("Mechanical Keyboard");
     }
 
+    @Test
+    void getAllProducts_Pageable_Success() {
+        org.springframework.data.domain.Page<Product> page = new org.springframework.data.domain.PageImpl<>(List.of(product));
+        org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(0, 10);
+        when(productRepository.findAll(pageable)).thenReturn(page);
+
+        org.springframework.data.domain.Page<ProductResponse> responses = productService.getAllProducts(pageable);
+
+        assertThat(responses).hasSize(1);
+        assertThat(responses.getContent().get(0).getProductName()).isEqualTo("Mechanical Keyboard");
+    }
+
 }

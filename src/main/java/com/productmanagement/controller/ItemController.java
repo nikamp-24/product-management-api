@@ -17,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 
 @RestController
 @RequestMapping("/api/v1")
@@ -35,8 +37,9 @@ public class ItemController {
 
     @GetMapping("/items")
     @PreAuthorize("hasAnyRole('ADMIN','USER')")
-    public ResponseEntity<List<ItemResponse>> getAllItems() {
-        List<ItemResponse> response = itemService.getAllItems();
+    public ResponseEntity<Page<ItemResponse>> getAllItems(
+            @PageableDefault(size = 10, sort = "id") Pageable pageable) {
+        Page<ItemResponse> response = itemService.getAllItems(pageable);
         return ResponseEntity.ok(response);
     }
 

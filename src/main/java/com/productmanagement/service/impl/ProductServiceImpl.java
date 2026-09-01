@@ -79,6 +79,12 @@ public class ProductServiceImpl implements ProductService {
                 .toList();
     }
 
+    @Override
+    public org.springframework.data.domain.Page<ProductResponse> getAllProducts(org.springframework.data.domain.Pageable pageable) {
+        return productRepository.findAll(pageable)
+                .map(this::mapToResponse);
+    }
+
     private ProductResponse mapToResponse(Product product) {
         return ProductResponse.builder()
                 .id(product.getId())

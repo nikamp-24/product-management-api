@@ -75,6 +75,31 @@ public class ItemServiceImpl implements ItemService {
                 .toList();
     }
 
+    @Override
+    public org.springframework.data.domain.Page<ItemResponse> getAllItems(org.springframework.data.domain.Pageable pageable) {
+        return itemRepository.findAll(pageable)
+                .map(this::mapToResponse);
+    }
+
+    @Override
+    public List<ItemResponse> getItemsByProductId(Long productId) {
+        if (!productRepository.existsById(productId)) {
+            throw new ResourceNotFoundException("Product not found with id: " + productId);
+        }
+        return itemRepository.findByProductId(productId).stream()
+                .map(this::mapToResponse)
+                .toList();
+    }
+
+    @Override
+    public org.springframework.data.domain.Page<ItemResponse> getItemsByProductId(Long productId, org.springframework.data.domain.Pageable pageable) {
+        if (!productRepository.existsById(productId)) {
+            throw new ResourceNotFoundException("Product not found with id: " + productId);
+        }
+        return itemRepository.findByProductId(productId, pageable)
+                .map(this::mapToResponse);
+    }
+
     private ItemResponse mapToResponse(Item item) {
         return ItemResponse.builder()
                 .id(item.getId())

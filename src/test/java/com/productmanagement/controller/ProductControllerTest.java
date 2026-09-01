@@ -108,11 +108,20 @@ class ProductControllerTest {
         mockMvc.perform(get("/api/v1/products")
                         .header("Authorization", "Bearer " + adminToken))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$").isArray());
+                .andExpect(jsonPath("$.content").isArray());
     }
 
     @Test
     @Order(5)
+    void getItemsByProductId_Success() throws Exception {
+        mockMvc.perform(get("/api/v1/products/" + createdProductId + "/items")
+                        .header("Authorization", "Bearer " + adminToken))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.content").isArray());
+    }
+
+    @Test
+    @Order(6)
     void getProductById_Success() throws Exception {
         mockMvc.perform(get("/api/v1/products/" + createdProductId)
                         .header("Authorization", "Bearer " + adminToken))

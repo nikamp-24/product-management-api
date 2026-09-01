@@ -231,6 +231,10 @@ class ProductManagementApiApplicationTests {
                         .header("Authorization", "Bearer " + userToken))
                 .andExpect(status().isOk());
 
+        mockMvc.perform(get("/api/v1/products/" + createdProductId + "/items")
+                        .header("Authorization", "Bearer " + userToken))
+                .andExpect(status().isOk());
+
         ItemRequest updateItem = ItemRequest.builder()
                 .productId(createdProductId)
                 .quantity(50)

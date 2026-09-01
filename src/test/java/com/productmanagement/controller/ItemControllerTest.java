@@ -115,7 +115,7 @@ class ItemControllerTest {
         mockMvc.perform(get("/api/v1/items")
                         .header("Authorization", "Bearer " + adminToken))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$").isArray());
+                .andExpect(jsonPath("$.content").isArray());
     }
 
     @Test

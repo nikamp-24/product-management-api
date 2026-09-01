@@ -154,4 +154,27 @@ class ItemServiceImplTest {
         assertThat(responses.get(0).getQuantity()).isEqualTo(50);
     }
 
+    @Test
+    void getAllItems_Pageable_Success() {
+        org.springframework.data.domain.Page<Item> page = new org.springframework.data.domain.PageImpl<>(List.of(item));
+        org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(0, 10);
+        when(itemRepository.findAll(pageable)).thenReturn(page);
+
+        org.springframework.data.domain.Page<ItemResponse> responses = itemService.getAllItems(pageable);
+
+        assertThat(responses).hasSize(1);
+        assertThat(responses.getContent().get(0).getQuantity()).isEqualTo(50);
+    }
+
+    @Test
+    void getItemsByProductId_Success() {
+        when(productRepository.existsById(10L)).thenReturn(true);
+        when(itemRepository.findByProductId(10L)).thenReturn(List.of(item));
+
+        List<ItemResponse> responses = itemService.getItemsByProductId(10L);
+
+        assertThat(responses).hasSize(1);
+        assertThat(responses.get(0).getProductId()).isEqualTo(10L);
+    }
+
 }
