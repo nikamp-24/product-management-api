@@ -16,7 +16,7 @@ import lombok.Setter;
 public class ProductRequest {
 
     @NotBlank(message = "Product name is required")
-    @Size(min = 2, max = 150, message = "Product name must be between 2 and 150 characters")
+    @Size(min = 2, max = 255, message = "Product name must be between 2 and 255 characters")
     private String productName;
 
 }
